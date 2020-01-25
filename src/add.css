@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Montserrat:400,700&display=swap');
+
+html{
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	background-color: #FAFAFA;
+}
+
+h1{
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+	margin: 0;
+	font-weight: bold;
+}
+
+#header{
+	width: 100%;
+	background-color: #24292E;
+	color: white;
+	min-height: 68px;
+}
+
+#header h1{
+	display: inline-block;
+	padding: 1.2rem;
+}
+
+#header a{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.85);
+	float: right;
+	font-weight: bold;
+	margin: 1.5rem 2rem;
+}
+
+#header a:hover{
+	color: rgba(255, 255, 255, 1);
+}
+
+#subheader{
+	display: block;
+	margin: 1rem auto;
+	padding: 1rem;
+	width: 30%;
+	text-align: center;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.form-style-7{
+	max-width:500px;
+	margin:50px auto;
+	background:#fff;
+	border-radius:2px;
+	padding:20px;
+}
+
+.form-style-7 ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+
+.form-style-7 li{
+	display: block;
+	padding: 9px;
+	border:1px solid #24292E;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+
+.form-style-7 li:last-child{
+	border: none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.form-style-7 li > label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+	padding: 2px 5px 2px 5px;
+	color: #B9B9B9;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.form-style-7 input[type="text"],
+.form-style-7 input[type="date"],
+.form-style-7 input[type="number"],
+.form-style-7 input[type="url"],
+.form-style-7 textarea,
+.form-style-7 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+}
+.form-style-7 li > span{
+	background: #F3F3F3;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #C0C0C0;
+	font-size: 11px;
+}
+.form-style-7 textarea{
+	resize:none;
+}
+.form-style-7 input[type="submit"],
+.form-style-7 input[type="button"]{
+	border-radius: 0.3rem;
+	background: #2471FF;
+	border: none;
+	padding: 1rem;
+	color: #D2E2FF;
+	font-size: 1rem;
+}
+.form-style-7 input[type="submit"]:hover,
+.form-style-7 input[type="button"]:hover{
+	background: #6B9FFF;
+	color:#fff;
+}
