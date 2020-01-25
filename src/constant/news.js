@@ -11,5 +11,18 @@ export const news = [
         donateText: "Donate to Save Koala!",
         helpURL: "https://www.redcross.org.au/get-involved/connect/volunteer",
         helpText: "Volunteer With Australian Red Cross!"
+    },
+    {
+        country: "China",
+        title: "Novel Coronavirus, Wuhan, China",
+        imgURL: "https://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/0B2C35191CE0480AA7F3C43C943DFEC7/wuhan-china-hospital-patient-mystery-virus-1nv9jq-afp-20200119_0B2C35191CE0480AA7F3C43C943DFEC7.jpg",
+        subTitle: "China coronavirus outbreak: China Suspends Tours Abroad as Xi Warns of ‘Grave Situation’. Death toll hits 41 as second case confirmed in U.S.",
+        content1: "The Centers for Disease Control and Prevention (CDC) is closely monitoring an outbreak of respiratory illness caused by a novel (new) coronavirus first identified in Wuhan, Hubei Province, China.",
+        content2: "Chinese authorities identified the new coronavirus, which has resulted in hundreds of confirmed cases in China, including cases outside Wuhan, with additional cases being identified in a growing number of countries internationally.",
+        content3: "The first case in the United States was announced on January 21, 2020. There are ongoing investigations to learn more.",
+        donateURL: "https://wwwnc.cdc.gov/travel/notices/warning/novel-coronavirus-wuhan-china",
+        donateText: "Epidemic Prevention Measures",
+        helpURL: "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses",
+        helpText: "Q&A on Coronaviruses"
     }
 ]
