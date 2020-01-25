@@ -1,6 +1,7 @@
 import React, { useState }  from "react";
 import ReactDOM from "react-dom";
 import '../src/home.css'
+import '../src/news.css'
 import MapChart from "./MapChart";
 import ReactTooltip from "react-tooltip";
 import Head from './components/Head';
