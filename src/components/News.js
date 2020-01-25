@@ -1,25 +1,38 @@
 import React from "react";
 import { news }  from '../constant/news'
 import {
-    withRouter
+    withRouter,
+    Redirect
   } from 'react-router-dom'
 class News extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            new: {}
+            new: {
+                country: "",
+                title: "",
+                imgURL: "",
+                subTitle: "",
+                content1: "",
+                content2: "",
+                content3: "",
+                donateURL: "",
+                donateText: "",
+                helpURL: "",
+                helpText: ""
+            }
         };
     }
 
-    componentDidMount() {
-        
+    componentWillMount() {
         var filteredNews = news.filter(newObj => {
             return newObj.country == this.props.match.params.country
         })
 
-        this.setState({new: filteredNews[0]})
-
+        if(filteredNews.length > 0) {
+            this.setState({new: filteredNews[0]})
+        }
     }
     render() {
         return(
