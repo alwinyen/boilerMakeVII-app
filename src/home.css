@@ -24,8 +24,9 @@ h1{
 	min-height: 68px;
 }
 
-#header h1{
-	padding: 1.2rem;
+#header img{
+	width: 18rem;
+	margin: 1rem;
 }
 
 hr{
@@ -51,6 +52,14 @@ hr{
 	margin-right: 5rem;
 	margin-bottom: 0.4rem;
 	padding: 0.2rem;
+}
+
+#typeTitle{
+	margin-left: 8rem;
+}
+
+#timeTitle{
+	margin-left: 11rem;
 }
 
 /* #map{
