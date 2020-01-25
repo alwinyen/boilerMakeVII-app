@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState }  from "react";
 import ReactDOM from "react-dom";
 import '../src/home.css'
 import MapChart from "./MapChart";
 
 function App() {
+  const [content, setContent] = useState("");
   return (
     <div>
 		<div id = "header">
@@ -36,7 +37,7 @@ function App() {
 			</select>
 		</div>
     <div id = "map">
-      <MapChart />
+      <MapChart setTooltipContent={setContent} />
     </div>
     </div>
   );
