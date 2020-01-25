@@ -55,28 +55,8 @@ hr{
 }
 
 #typeTitle{
-	margin-left: 8rem;
+	margin-left: 9rem;
 }
-
-#timeTitle{
-	margin-left: 11rem;
-}
-
-/* #map{
-	display: absolute;
-	left: 50%;
-	top: 5%;
-	transform: translate(25%, 5%);
-	width: 66%;
-    height: 580px;
-    object-fit: cover;	  
-}
-
-#gps{
-	display: absolute;
-	transform: translate(70%, -150%);
-	width: 3%;
-} */
 
 #map{
 	margin-top: 1%;

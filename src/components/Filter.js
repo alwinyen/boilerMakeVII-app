@@ -43,8 +43,8 @@ class Filter extends React.Component {
         if (this.state.markers == prevState.markers) {
             this.setState({markers: filteredMarkers})
         }
-        console.log(this.state.markers)
-        console.log(prevState.markers)
+        // console.log(this.state.markers)
+        // console.log(prevState.markers)
     }
 
     render() {
