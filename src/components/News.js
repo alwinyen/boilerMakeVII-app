@@ -22,7 +22,7 @@ class News extends React.Component {
                     </div>
                 </div>
                 <div id = "content2">
-                    <h1>What Can You Do?</h1>
+                    <h1>How can I help?</h1>
                     <a href = "https://www.savethekoala.com/donate" target="_blank">Donate to Save Koala!</a>
                     <a href = "https://www.redcross.org.au/get-involved/connect/volunteer" target="_blank">Volunteer With Australian Red Cross!</a>
                 </div>

@@ -6,12 +6,11 @@ import {
   Geography,
   Marker
 } from "react-simple-maps";
-import { markers } from './constant/markers'
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const MapChart = ({ setTooltipContent }) => {
+const MapChart = ({ setTooltipContent, markers }) => {
   return (
       <ComposableMap data-tip="" width={1000} height={600} projectionConfig={{ scale: 150 }}>
         <ZoomableGroup center={[0,-40]}>
