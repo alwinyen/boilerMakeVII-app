@@ -2,6 +2,11 @@ import React, { useState }  from "react";
 import ReactDOM from "react-dom";
 import '../src/home.css'
 import '../src/news.css'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 import Head from './components/Head';
 import Filter from './components/Filter';
@@ -12,8 +17,16 @@ function App() {
   return (
     <React.Fragment>
       <Head/>
-      <Filter setContent = {setContent} content = {content} />
-      {/* <News/> */}
+      <Router>
+        <Switch>
+            <Route path="/" exact>
+              <Filter setContent = {setContent} content = {content} />
+            </Route>
+            <Route path="/news/:country">
+              <News/>
+            </Route>
+        </Switch>
+      </Router>
     </React.Fragment>
   );
 }

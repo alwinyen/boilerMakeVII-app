@@ -6,11 +6,16 @@ import {
   Geography,
   Marker
 } from "react-simple-maps";
+import {
+  withRouter
+} from 'react-router-dom'
+
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const MapChart = ({ setTooltipContent, markers }) => {
+const MapChart = ({ setTooltipContent, markers, history }) => {
+  console.log(history)
   return (
       <ComposableMap data-tip="" width={1000} height={600} projectionConfig={{ scale: 150 }}>
         <ZoomableGroup center={[0,-40]}>
@@ -20,10 +25,13 @@ const MapChart = ({ setTooltipContent, markers }) => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
+                  onClick={() => {
+                    const { NAME } = geo.properties;
+                    return ( history.push('/news/' + NAME) )
+                  }}
                   onMouseEnter={() => {
                     const { NAME } = geo.properties;
                     setTooltipContent(`${NAME}`);
-                    console.log(NAME)
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");
@@ -75,4 +83,4 @@ const MapChart = ({ setTooltipContent, markers }) => {
   );
 };
 
-export default memo(MapChart);
+export default memo(withRouter(MapChart));
