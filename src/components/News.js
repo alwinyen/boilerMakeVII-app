@@ -4,7 +4,7 @@ class News extends React.Component {
         return(
             <React.Fragment>
                 <div id = "content1">
-                    <img src = "../../australia wildfire.jpg"></img>
+                    <img src = "https://storage.googleapis.com/boilermakevii.appspot.com/australia%20wildfire.jpg"></img>
                     <div id = "text">
                         <h1>Australia Bushfire</h1>
                         <div id = "subtitle">
