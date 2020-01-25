@@ -30,10 +30,13 @@ const MapChart = ({ setTooltipContent }) => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
+                  onClick={()=> {
+                    alert("HIt")
+                  }}
                   onMouseEnter={() => {
-                    const { NAME, POP_EST } = geo.properties;
-                    setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
-                    console.log(NAME)
+                    const { NAME } = geo.properties;
+                    setTooltipContent(`${NAME}`);
+                    console.log(geo.properties)
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");

@@ -2,6 +2,7 @@ import React, { useState }  from "react";
 import ReactDOM from "react-dom";
 import '../src/home.css'
 import MapChart from "./MapChart";
+import ReactTooltip from "react-tooltip";
 
 function App() {
   const [content, setContent] = useState("");
@@ -38,6 +39,7 @@ function App() {
 		</div>
     <div id = "map">
       <MapChart setTooltipContent={setContent} />
+      <ReactTooltip>{content}</ReactTooltip>
     </div>
     </div>
   );
