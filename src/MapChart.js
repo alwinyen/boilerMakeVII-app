@@ -6,27 +6,13 @@ import {
   Geography,
   Marker
 } from "react-simple-maps";
+import { markers } from './constant/markers'
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const rounded = num => {
-  if (num > 1000000000) {
-    return Math.round(num / 100000000) / 10 + "Bn";
-  } else if (num > 1000000) {
-    return Math.round(num / 100000) / 10 + "M";
-  } else {
-    return Math.round(num / 100) / 10 + "K";
-  }
-};
-
-const markers = [
-  { markerOffset: -30, name: "New South Wales, Australia", coordinates: [146.9211, -31.2532] }
-];
-
 const MapChart = ({ setTooltipContent }) => {
   return (
-    <>
       <ComposableMap data-tip="" width={1000} height={600} projectionConfig={{ scale: 150 }}>
         <ZoomableGroup center={[0,-40]}>
           <Geographies geography={geoUrl}>
@@ -36,8 +22,8 @@ const MapChart = ({ setTooltipContent }) => {
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    const { NAME, POP_EST } = geo.properties;
-                    setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                    const { NAME } = geo.properties;
+                    setTooltipContent(`${NAME}`);
                     console.log(NAME)
                   }}
                   onMouseLeave={() => {
@@ -87,7 +73,6 @@ const MapChart = ({ setTooltipContent }) => {
       ))}
         </ZoomableGroup>
       </ComposableMap>
-    </>
   );
 };
 
