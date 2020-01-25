@@ -35,7 +35,9 @@ function App() {
 			  <option value = "all">All</option>
 			</select>
 		</div>
+    <div id = "map">
       <MapChart />
+    </div>
     </div>
   );
 }
