@@ -3,7 +3,8 @@ import {
   ZoomableGroup,
   ComposableMap,
   Geographies,
-  Geography
+  Geography,
+  Marker
 } from "react-simple-maps";
 
 const geoUrl =
@@ -19,6 +20,10 @@ const rounded = num => {
   }
 };
 
+const markers = [
+  { markerOffset: -30, name: "New South Wales, Australia", coordinates: [146.9211, -31.2532] }
+];
+
 const MapChart = ({ setTooltipContent }) => {
   return (
     <>
@@ -30,13 +35,10 @@ const MapChart = ({ setTooltipContent }) => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  onClick={()=> {
-                    alert("HIt")
-                  }}
                   onMouseEnter={() => {
-                    const { NAME } = geo.properties;
-                    setTooltipContent(`${NAME}`);
-                    console.log(geo.properties)
+                    const { NAME, POP_EST } = geo.properties;
+                    setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                    console.log(NAME)
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");
@@ -47,8 +49,10 @@ const MapChart = ({ setTooltipContent }) => {
                       outline: "none"
                     },
                     hover: {
-                      fill: "#F53",
-                      outline: "none"
+                      fill: "#24292E",
+                      outline: "none",
+                      borderWidth: "1px",
+                      borderColor: "#000",
                     },
                     pressed: {
                       fill: "#E42",
@@ -59,6 +63,28 @@ const MapChart = ({ setTooltipContent }) => {
               ))
             }
           </Geographies>
+          {markers.map(({ name, coordinates, markerOffset }) => (
+        <Marker key={name} coordinates={coordinates} style = {{position: "absolute", zIndex: "100"}}>
+          <g
+            fill="none"
+            stroke="#FF5533"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            transform="translate(-12, -24)"
+          >
+            <circle cx="12" cy="10" r="3" />
+            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+          </g>
+          <text
+            textAnchor="middle"
+            y={markerOffset}
+            style={{ fontFamily: "system-ui", fill: "#FF5533" }}
+          >
+            {name}
+          </text>
+        </Marker>
+      ))}
         </ZoomableGroup>
       </ComposableMap>
     </>
