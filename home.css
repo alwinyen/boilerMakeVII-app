@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Montserrat&display=swap');
+
+html{
+	overflow: hidden;
+}
+body{
+	margin: 2rem;
+	font-family: 'Montserrat', sans-serif;
+}
+#header{
+	width: 100%;
+}
+
+#header h1{
+	font-family: 'Bangers', cursive;
+	letter-spacing: 5px;
+	font-size: 3rem;
+	margin-bottom: 0;
+}
+
+#filter p{
+	display: inline-block;
+	margin-bottom: 0.4rem;
+	font-size: 0.8rem;
+}
+
+#filter select{
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	border-radius: 0.5rem;
+	margin-right: 5rem;
+}
+
+#map{
+	display: absolute;
+	left: 50%;
+	top: 5%;
+	transform: translate(25%, 5%);
+	width: 66%;
+    height: 580px;
+    object-fit: cover;	  
+}
+
+#gps{
+	display: absolute;
+	transform: translate(70%, -150%);
+	width: 3%;
+}
