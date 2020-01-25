@@ -3,7 +3,7 @@ class Head extends React.Component {
     render() {
         return(
             <div id = "header">
-			    <img src = "logo.html"></img>
+			    <img src = "https://storage.googleapis.com/boilermakevii.appspot.com/logo.png"></img>
 				<a href = "home.html">HOME</a>
 		    </div>
         )
